@@ -8,6 +8,7 @@ node_modules/
 # -----------------------------
 
 build/
+out/
 .out/
 .next/
 .vercel/
@@ -70,7 +71,8 @@ node_modules/
 # Build output
 # -----------------------------
 
-build/
+#build/
+#out/
 .out/
 .next/
 .vercel/
