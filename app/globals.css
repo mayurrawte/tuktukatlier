@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Inter', sans-serif;
+
+    --background: 36 25% 96%;
+    --foreground: 0 0% 17%;
+    --card: 36 30% 98%;
+    --card-foreground: 0 0% 17%;
+    --popover: 36 30% 98%;
+    --popover-foreground: 0 0% 17%;
+    --primary: 0 0% 17%;
+    --primary-foreground: 36 25% 96%;
+    --secondary: 33 20% 76%;
+    --secondary-foreground: 0 0% 17%;
+    --muted: 36 20% 90%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 38 35% 56%;
+    --accent-foreground: 0 0% 17%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 36 25% 96%;
+    --border: 33 15% 85%;
+    --input: 33 15% 85%;
+    --ring: 38 35% 56%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 0 0% 17%;
+    --foreground: 36 25% 96%;
+    --card: 0 0% 12%;
+    --card-foreground: 36 25% 96%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 36 25% 96%;
+    --primary: 36 25% 96%;
+    --primary-foreground: 0 0% 17%;
+    --secondary: 0 0% 25%;
+    --secondary-foreground: 36 25% 96%;
+    --muted: 0 0% 22%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 38 35% 46%;
+    --accent-foreground: 36 25% 96%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 36 25% 96%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 38 35% 46%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border transition-colors duration-300;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-medium;
+    line-height: 1.2;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
